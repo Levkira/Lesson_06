@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lesson_6</title>
+</head>
+<body>
+<script>
+    function isCharPresent (string , symbol) {
+        for (i = 0; i <= string.length; i++) {
+            if (string[i].toLowerCase() === symbol.toLowerCase()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function CharIndexOf (string, symbol) {
+        for (i = 0; i <= string.length; i++) {
+            if (string[i].toLowerCase() === symbol.toLowerCase()) {
+                return i;
+            }
+        }
+        return '-1';
+    }
+    
+        var obj = {};
+    function objectClone(obj) {
+        var clone = {};
+        for(key in obj) {
+            if(typeof obj[key] === 'object') {
+                clone[key] = objectClone(obj[key]);
+            } else {
+                clone[key] = obj[key];
+            }
+        }
+        return clone;
+    }
+</script>
+</body>
+</html>
+
