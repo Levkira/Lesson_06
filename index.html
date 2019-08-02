@@ -17,18 +17,18 @@
 
     function CharIndexOf (string, symbol) {
         for (i = 0; i <= string.length; i++) {
-            if (string[i].toLowerCase() === symbol.toLowerCase()) {
+            if (string[i].toLowerCase() === symbol.toLowerCase() ) {
                 return i;
             }
         }
-        return '-1';
+        return -1;
     }
     
         var obj = {};
     function objectClone(obj) {
         var clone = {};
         for(key in obj) {
-            if(typeof obj[key] === 'object') {
+            if(IsObject(obj[key])) {
                 clone[key] = objectClone(obj[key]);
             } else {
                 clone[key] = obj[key];
